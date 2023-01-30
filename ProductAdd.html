@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Suprise products</title>
+    <link rel="stylesheet" href="style4TheSuprise.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <div class="heading">
+        <div class="container">
+          <div class="panda">
+            <div class="logo">
+              <img src="images4html/logo-removebg-preview.png" width="125px" />
+              <body>
+                <body bgcolor= "#470869" class="body">
+                 <div align="center" class="noprint">
+                    <div id="main_table" class="page_heading page_bg">
+                      <div z-index="20" id="productadd"></div>
+                      <span class="page_heading_head_prodadd">
+                        <h1>PRODUCT ADD</h1></span>
+                        <button class="btn btn-outline-success" >Save</button>
+                        <button class="btn btn-outline-success" >Cancel</button>
+                      </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!--<?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // collect value of input field
+        $num = ($_REQUEST['fnum']);
+        if (empty($num)) {
+            echo "NeEd tO ChOoSe sOmEtHiNg";
+        } else {
+            echo $num;
+        }
+    }?>-->
+
+    
+          <p></p>
+          <table border="0" style="height: 0px; background-color: #000000; ; width: 100%;">
+            <tbody>
+            <tr style="border: none;">
+            <td style="border: none; padding: 0;">
+                <a href="" target=""><img src="" style="display: line; vertical-align: middle; margin-left: auto; margin-right: auto;"/></a></td>
+            </tr>
+            </tbody>
+            </table>
+    
+          <div stye="display: none;" class="onlyprint">
+          </div>
+          <div align="center">
+            <div class="page_heading">
+              <div id="page_main_full">
+                <form
+                  name="ffrm"
+                  method="post">
+                  <input type="hidden" name="ccid2" value="0" />
+                  <input type="hidden" name="ccid3" value="0" />
+                  <table cellpadding="0" cellspacing="0"
+                    border="0" width="100%" style="padding-left: 100px">
+                    <tr>
+                      <td>
+                        <h2 class="head_title">ID:#product_form</h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td valign="top" class="new_prod_add_td1">
+                              <input type="hidden" name="cid" value="0" />
+                              <table
+                                cellpadding="0" cellspacing="0" id="cdiv_0" border="0">
+                                <tr>
+                                  <td id="td_cid_0" class="new_prod_add_list">
+                                    
+                                       
+                                      <form method="_GET">
+                                        <label>SKU</label>
+                                        <input type="text" name="sku" placeholder="#sku" /> </form>
+                                        <br />
+                                      
+                                      <form method="_GET">
+                                        <label>Name</label>
+                                        <input type="text" name="name" placeholder="#name" /> </form>
+                                      
+                                      <form method="_GET">
+                                        <label>Price ($)</label>
+                                        <input type="text" name="price" placeholder="#price" /> </form>
+                                        <br />
+                                        <!-- ID:#productType-->
+                                        <label>Type Switcher</label>
+                                        <select name="type">
+                                            <option>None</option>
+                                            <option>DVD</option>
+                                            <option>Furniture</option>
+                                            <option>Book</option>
+                                        </select>
+                                        <br />
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            
+                            <td valign="top">
+                              <table
+                                cellpadding="0"
+                                border="0"
+                                cellspacing="0"
+                                id="cdiv_2"
+                                stylez="display:none;">
+                                
+                            <td valign="top">
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                id="cdiv_3"
+                                style="display: none"
+                              >
+                                </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+                <br />
+              </div>
+            </div>
+            </div>        
+          </div>
+          <table cellpadding="4" cellspacing="4"
+     border="5" width="100%" style="padding-left: 100px">
+     <form action="/action_page.php">
+        <label for="img">Add image:</label>
+        <input type="file" id="img" name="img" accept="image/*" />
+        <input type="submit" />
+      </form>
+    </table>
+        </body>
+      </body>
+
+      <table border="0" style="height: 0px; background-color: #000000; ; width: 100%;">
+        <tbody>
+        <tr style="border: none;">
+            <td style="border: none; padding: 0;">
+            <a href="" target=""><img src="" style="display: box; vertical-align: middle; margin-left: auto; margin-right: auto;"/></a></td>
+        </tr>
+
+        <?php
+        session_start();
+        
+        //if($_SESSION['user_id'] && $_SESSION['person_id'] && $_SESSION['name'] && $_SESSION['surname'] && $_SESSION['darbagrupa'] && $_SESSION['statuss_id'] && $_SESSION['filiale_id'] && $_SESSION['group_id'] && $_SESSION['amats']){
+        
+        
+        include("conn.php");
+        include("../../mntg.php");
+        
+        require_once('../config/lang/eng.php');
+        require_once('../tcpdf.php');
+        
+        // create new PDF document
+        $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false); 
+        
+        // set document information
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Andrejs Lipskis');
+        $pdf->SetTitle('Studenta līgums ar autoskolu');
+        $pdf->SetSubject('Studenta līgums ar autoskolu');
+        $pdf->SetKeywords('TCPDF, PDF, Studenta līgums ar autoskolu');
+        
+        // remove default header/footer
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
+        
+        //set margins
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+        
+        //set auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        
+        //set image scale factor
+        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO); 
+        
+        //set some language-dependent strings
+        $pdf->setLanguageArray($l);  
+        
+        // ---------------------------------------------------------
+        
+        // set font
+        $pdf->SetFont('dejavusans', '', 8);
+        
+        // add a page
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // Print a table
+        
+        // hederis -
+        // add a page
+        $pdf->AddPage();
+        
+        
+        $sql_mg = "SELECT * FROM ca_studentadati_grupa ca_sgd, ca_students ca_s, ca_state_city ca_c, ca_kartesnr ca_knr, ca_macibugrupas ca_mg, ca_kategorija ca_kat, ca_states ca_st WHERE ca_sgd.studgrupa_id=".$_GET['mgid']." AND ca_sgd.students_id=ca_s.students_id AND ca_s.pilseta_id=ca_c.city_id AND ca_sgd.grupa_id=ca_mg.grupa_id AND ca_mg.kartesnr_id=ca_knr.kartesnr_id AND ca_knr.kategorija_id=ca_kat.kategorija_id AND ca_c.state_id=ca_st.state_id;";
+        $result_mg = mysql_query ($sql_mg);
+        $row_mg = mysql_fetch_array($result_mg);
+        
+        $sql_mg2 = "SELECT * FROM ca_studentadati_grupa ca_sgd WHERE ca_sgd.studgrupa_id=".$_GET['mgid']."; ";
+        $result_mg2 = mysql_query ($sql_mg2);
+        $row_mg2 = mysql_fetch_array($result_mg2);
+        
+        $num_results_mg = mysql_num_rows($result_mg);
+        
+        $kategorija = rtrim( ltrim($row_mg['kat_nosaukums'], '0/') , '/0');
+        $teorija = $row_mg['teorija'];
+        $brauksanas_laiks = $row_mg['brauksanaslaiks'];
+        $brauksana = $row_mg['brauksana'];
+        
+        
+        $nodarb_sakums = substr($row_mg['mac_sak_datums'],6,2).'.'.substr($row_mg['mac_sak_datums'],4,2).'.'.substr($row_mg['mac_sak_datums'],0,4);
+        //$nodarb_beigas = substr($row_mg['mac_beig_datums'],6,2).'.'.substr($row_mg['mac_beig_datums'],4,2).'.'.substr($row_mg['mac_beig_datums'],0,4);
+        //$nodarb_beigas = date("d.m.Y", mktime(0, 0, 0, substr($row_mg['mac_sak_datums'],4,2)+6, substr($row_mg['mac_sak_datums'],6,2), substr($row_mg['mac_sak_datums'],0,4) ));
+        $nodarb_beigas = substr($row_mg['liguma_beigu_datums'],6,2).'.'.substr($row_mg['liguma_beigu_datums'],4,2).'.'.substr($row_mg['liguma_beigu_datums'],0,4).'.';
+        
+        if($row_mg['show_state']=='N'){
+          $show_rajons=', '.$row_mg['state_name'];
+        }else{
+          $show_rajons='';
+        }
+        
+        if(substr($row_mg['mac_sak_datums'],4,2)=='01'){$mounth = "janvāris";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='02'){$mounth = "februāris";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='03'){$mounth = "marts";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='04'){$mounth = "aprīlis";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='05'){$mounth = "maijs";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='06'){$mounth = "jūnijs";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='07'){$mounth = "jūlijs";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='08'){$mounth = "augusts";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='09'){$mounth = "septembris";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='10'){$mounth = "oktobris";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='11'){$mounth = "novembris";}
+        if(substr($row_mg['mac_sak_datums'],4,2)=='12'){$mounth = "decembris";}
+        
+        $htmltable1 = "<p align=\"center\">
+        LĪGUMS NR. 4-1-".$row_mg["kartes_numurs"]."-".$kategorija."-<B>
+        ".$row_mg["liguma_nr"]."</B></p>Jelgava, "
+        .substr($row_mg['mac_sak_datums'],0,4).". gada ".substr($row_mg['mac_sak_datums'],6,2).". ".$mounth."<br />
+        <b>SIA ''LUX''</b>, juridiskā adrese Aveņu iela 44-2, Jelgava, Lv-3001, reģistrēta komercreģistrā ar vienoto reģistrācijas numuru LV43603024538, kuru uz statūtu pamata pārstāv tās ".$_SESSION['amats']." ".$_SESSION['name']." ".$_SESSION['surname'].", no vienas puses, turpmāk saukts ''AUTOSKOLA'', un fiziska persona <b>".$row_mg["vards"]." ".$row_mg["uzvards"]."</b> personas kods <b>".substr($row_mg["personaskods"],0,6)."-".substr($row_mg["personaskods"],6,5)."</b> dzīvojošs(a) <b>".$row_mg["adrese"].", ".$row_mg["city_name"].$show_rajons."</b> turpmāk saukts ''AUDZĒKNIS'', no otras puses, noslēdz šo līgumu par sekojošo:<br />";
+        
+        $pdf->writeHTML($htmltable1, true, 0, true, 0);
+        
+        $htmltable2 = "<p align=\"center\"><B>1. LĪGUMA PRIEKŠMETS</B></p>1.1.AUTOSKOLA sniedz iespēju AUDZĒKNIM apgūt zināšanas Ceļu Satiksmes Noteikumos (CSN), satiksmes drošībā, automobiļa uzbūvē un ekspluatācijā un nodrošina iespēju apgūt praktiskās braukšanas iemaņas ''".$kategorija."'' kategorijai atbilstošu transportlīdzekļu vadīšanā, kas nepieciešamas AUDZĒKNIM attiecīgās transportlīdzekļa vadītāja kvalifikācijas iegūšanai LR likumdošanas aktos noteiktajā kārtībā.<br />1.2.Apmācības kurss ir pabeigts, un līgums tiek uzskatīts par izpildītu no AUTOSKOLAS puses, kad AUDZĒKNIS ir nokārtojis AUTOSKOLAS teorētisko priekšmetu eksāmenu un pabeidzis automašīnas praktiskās vadīšanas apmācību šajā līgumā noteiktajā kārtībā.<br />";
+        
+        $pdf->writeHTML($htmltable2, true, 0, true, 0);
+        
+        $htmltable3 = "<p align=\"center\"><B>2. AUTOSKOLAS PIENĀKUMI UN TIESĪBAS</B></p>2.1.Organizēt nodarbības un sniegt iespēju iegūt zināšanas AUDZĒKNIM atbilstoši spēkā esošo normatīvo aktu prasībām attiecīgās kategorijas transportlīdzekļu vadītāju sagatavošanai.<br />2.2.Atbilstoši šī līguma noteikumiem nodrošināt iespēju mācīties CSN attālināti izmantojot internetu. Interneta vietnes adrese: <B>www.lux.lv</B> (sadaļā ''autoskola'').<br />2.3.Pēc šī līguma abpusējas parakstīšanas, ieskaitīt AUDZĒKNI attiecīgajā mācību grupā, veikt ierakstus nodarbību un sekmju uzskaites žurnālā, noteiktā kārtībā reģistrēt žurnālu Valsts akciju sabiedrības ''Ceļu Satiksmes Drošības Direkcija'', turpmāk tekstā CSDD, Jelgavas nodaļā.<br />2.4.Informēt AUDZĒKNI par izmaiņām nodarbību organizēšanā.<br />2.5.Informēt AUDZĒKNI par iestādēm, kurām ir tiesības rīkot pirmās palīdzības kursus un savu iespēju robežās organizēt pirmās medicīniskās palīdzības (PMP) lekciju kursu AUTOSKOLAS telpās.<br />2.6.Informēt AUDZĒKNI par braukšanas mācību atļaujas iegūšanas kārtību un iestādēm, kurām ir tiesības veikt medicīnisko pārbaudi.<br />2.7.Pēc apmācības kursa pabeigšanas, AUDZĒKNIM izsniegt aizpildītu un parakstītu apmācības karti, kas apliecina AUDZĒKŅA teorētisko un praktisko zināšanu apguvi, saskaņā ar normatīvajiem aktiem, kas regulē attiecīgās kategorijas transportlīdzekļu vadītāju sagatavošanu.<br />2.8.AUTOSKOLA ir tiesīga atskaitīt AUDZĒKNI no grupas un bez brīdinājuma vienpusēji lauzt šo līgumu, ja:<ul><li>AUDZĒKNIS bez attaisnojoša iemesla neapmekē teorijas nodarbības;<li>atkārtoti neievēro autoskolas pakalpojumu apmaksas kārtību;<li>neievēro citus šī līguma nosacījumus.</ul>&nbsp;";
+        
+        $pdf->writeHTML($htmltable3, true, 0, true, 0);
+        
+        $htmltable4 = "<p align=\"center\"><B>3. AUDZĒKŅA PIENĀKUMI UN TIESĪBAS</B></p>3.1.Regulāri apmeklēt teorētiskās nodarbības saskaņā ar mācību grupas žurnālā norādīto grafiku, nokārtot ieskaites un eksāmenus AUTOSKOLĀ. Parakstot šo līgumu AUDZĒKNIS apliecina, ka iepazinies ar mācību programmu, nodarbību sarakstu un eksāmenu termiņiem kā arī apņemas tos ievērot.<br />3.2.Atbilstoši šī līguma nosacījumiem apmaksāt AUTOSKOLAS pakalpojumus.<br />3.3.Ievērot autoskolas telpās un palīgtelpās kārtību, saudzīgi izturēties pret AUTOSKOLAS telpām, īpašumu un iekārtām.<br />3.4.AUDZĒKNIM ir tiesības pēc paša vēlēšanās jebkurā brīdī pārtraukt apmācības AUTOSKOLĀ.<br />";
+        
+        $pdf->writeHTML($htmltable4, true, 0, true, 0);
+        
+        $htmltable5 = "<p align=\"center\"><B>4. CENAS UN APMAKSAS KĀRTĪBA</B></p>4.1.Pusēm vienojoties, ir noteiktas sekojošas AUTOSKOLAS pakalpojumu cenas:<ul><li>Teorētisko priekšmetu apmācība ".$teorija." Ls<li>Braukšanas apmācība (".$brauksanas_laiks." minūtes) ".$brauksana." Ls<li>Skolas braukšanas eksāmens ".$row_mg2['skolas_brauks_eksam_cena']." Ls<li>Interneta apmācības programmas izmantošana www.lux.lv vietnē 5.00 Ls<li>Atkārtots teorētisko priekšmetu eksāmens 5.00 Ls<li>Līguma pagarinājums 20.00 Ls</ul>4.2.Ja AUDZĒKNIS izvēlas braukšanas instruktoru, ar kuru AUTOSKOLAI nav noslēgts līgums, tad Teorētisko priekšmetu apmācības maksa tiek palielināta par 20.00 Ls.<br />4.3.Apmācības kartes nozaudēšanas vai sabojāšanas gadījumā Autoskola izraksta dublikātu. Dublikāta maksa 5.00 Ls<br />4.4.Audzēknim ne mazāk kā 50% no teorētiskās apmācību kursa cenas jāsamaksā reģistrējoties un pilnīgi ir jānorēķinās līdz mācību kartes saņemšanai.<br />4.5.Iemaksātā nauda par apmācību AUTOSKOLĀ apmācības pārtraukšanas gadījumā AUDZĒKNIM netiek atgriezta.<br />4.6.CSDD eksāmeni tiek apmaksāti CSDD kasē.<br />";
+        
+        $pdf->writeHTML($htmltable5, true, 0, true, 0);
+        
+        $htmltable6 = "<p align=\"center\"><B>5. TEORĒTISKO PRIEKŠMETU APMĀCĪBAS KĀRTĪBA</B></p>5.1.Teorētisko priekšmetu apmācība notiks ''LUX'' Autoskolas mācību klasē <B>".$row_mg['macibu_vieta'].", telpas Nr. ".$row_mg['macibu_telpa']."</B>; nodarbību sākuma datums <B>".$nodarb_sakums."</B> nodarbību grafiks: ".$row_mg['apmacibulaiks'].".<br />5.2.Vienas teorētiskās mācību stundas ilgums ir ".$brauksanas_laiks." minūtes. Teorijas kursa ilgums ne mazāks kā noteikts attiecīgās kategorijas transportlīdzekļu vadītāju sagatavošanai.<br />5.3.Lai kontrolētu iegūtās zināšanas teorētiskās nodarbībās pasniedzējs ir tiesīgs rīkot ieskaites.<br />5.4.Apmācības beigās AUTOSKOLA rīko datorizētu teorētisko priekšmetu skolas eksāmenu. Skolas eksāmena nokārtošanas kritērijs: 1 kļūda no 30 jautājumiem. Gadījumā, ja skolas eksāmens nav nokārtots, tad tas ir jākārto atkārtoti.<br />5.5.Pirmās divas reizes skolas teorijas eksāmenu AUDZĒKNIS var kārtot bez maksas. Ja abas reizes nesekmīgi, tad katru nākamo jāmaksā atbilstoši šī līguma 4.1.punktā minētajai cenai.<br />5.6.Skolas teorētiskā eksāmena rezultāta derīguma termiņš 30 dienas. <I><B>Ja pagājušas vairāk par 30 dienām no nokārtošanas dienas, eksāmens jākārto atkārtoti bez maksas.</B></I><br />5.7.Ja AUDZĒKNIS nenokārto skolas teorētisko eksāmenu līdz līguma beigu datumam, AUDZĒKNIM ir tiesības līgumu pagarināt maksājot par to atbilstoši šī līguma 4.1.punktā minētajām cenām. Līgums tiek pagarināts uz diviem mēnešiem skaitot no rēķina apmaksas brīža. Ja arī pēc līguma pagarinājuma AUDZĒKNIS nevar nokārtot minētos eksāmenus, teorijas kurss viņam jāklausās atkārtoti, maksājot par to atbilstoši spēkā esošajiem AUTOSKOLAS izcenojumiem.<br />5.8.Ja līguma izbeigšanās brīdī AUDZĒKNIM vēl nav 18 gadu, līgums tiek pagarināts līdz brīdim, kad iestājas pilngadība, ar noteikumu, ja AUDZĒKNIS ir nokārtojis skolas teorētisko eksāmenu. Ja minētais eksāmens nav nokārtots, tad spēkā stājas šī līguma 5.7. punkts.<br />";
+        
+        $pdf->writeHTML($htmltable6, true, 0, true, 0);
+        
+        $htmltable7 = "<p align=\"center\"><B>6. BRAUKŠANAS APMĀCĪBAS KĀRTĪBA</B></p>6.1. AUDZĒKNIM, kurš apguvis Ceļu satiksmes noteikumu pamatzināšanas un noteiktā kārtībā ieguvis Braukšanas mācību atļauju ir atļauts uzsākt praktiskās nodarbības mācību braukšanā un AUTOSKOLA tam izsniedz stingrās uzskaites braukšanas apmācības karti, turpmāk tekstā APMĀCĪBAS KARTI, kas turpmāk glabājas pie AUDZĒKŅA.<br />6.2. AUDZĒKNIM ir tiesības brīvi izvēlēties braukšanas instruktoru. AUTOSKOLA informē AUDZĒKNI par braukšanas instruktoriem, kuriem ir tiesības veikt apmācību un ar kuriem AUTOSKOLAI ir noslēgts līgums, turpmāk tekstā SKOLAS INSTRUKTORU.<br />6.3. Autoskola informē audzēkni par braukšanas apmācības un apmaksas kārtību. AUDZĒKNIM samaksa par braukšanas nodarbību jāveic pirms braukšanas. <br />6.4. Ja AUDZĒKNIS neierodas uz braukšanas nodarbību savlaicīgi iepriekš (vismaz 24h) nebrīdinot par kavējumu SKOLAS INSTRUKTORS ir tiesīgs pieprasīt samaksu par nenotikušo nodarbību 100% apmērā.<br />6.5. Vienas braukšanas apmācības nodarbības ilgums ir 45 minūtes. Braukšanas ilgums dienā nedrīkst pārsniegt 2 nodarbības. Minimālais braukšanu skaits - ".$row_mg['kat_min_brauk_sk']." nodarbības (LR MK Noteikumi Nr. 131 no 15.02.2005).<br />6.6. Nepieciešamo braukšanas nodarbību skaitu nosaka SKOLAS INSTRUKTORS vadoties pēc audzēkņa apgūtajām iemaņām, taču ne mazāk kā iepriekš minētais minimālais braukšanas skaits. Kad SKOLAS INSTRUKTORS ir pieņēmis lēmumu par to, ka AUDZĒKNIS ir gatavs kārtot Valsts braukšanas eksāmenu, viņš paraksta APMĀCĪBAS KARTI. Ar šo brīdi braukšanas apmācība tiek uzskatīta par pabeigtu.<br />6.7. Gadījumā, ja AUDZĒKNIS ir nobraucis minimālo nodarbību skaitu un pretēji SKOLAS INSTRUKTORAM uzskata, ka ir gatavs kārtot Valsts braukšanas eksāmenu, AUDZĒKNIS ir tiesīgs veikt kontroles braucienu pie brīvi izvēlēta AUTOSKOLAS braukšanas instruktora. Kontroles brauciena laikā tiek sastādīts protokols, kurā tiek fiksētas AUDZĒKŅA pieļautās kļūdas novērtētas ar punktiem. Pēc sekmīga kontroles brauciena SKOLAS INSTRUKTORAM ir jāparaksta apmācības karte. Ja kontroles brauciens bijis nesekmīgs AUDZĒKNIS turpina braukšanas pie SKOLAS INSTRUKTORA vai arī izvēlas veikt atkārtotu testa braucienu.<br />";
+        
+        $pdf->writeHTML($htmltable7, true, 0, true, 0);
+        
+        $htmltable8 = "<p align=\"center\"><B>7. CITI NOTEIKUMI</B></p>7.1.AUTOSKOLA un AUDZĒKNIS piekrīt visas domstarpības starp Pusēm risināt sarunu ceļā, ja domstarpības nav izdevies atrisināt sarunu ceļā viena mēneša laikā no sarunu uzsākšanas, strīdu Puses iesniedz Latvijas Republikas tiesu iestādēs.<br />7.2.Visas izmaiņas un papildinājumi šim līgumam tiek noformēti rakstveidā un stājas spēkā ar to abpusējas parakstīšanas brīdi.<br />7.3.Autoskola patur tiesības mainīt nodarbību laikus un apmācības grafikus, saskaņojot šīs izmaiņas ar CSDD Jelgavas nodaļu.<br />7.4.Līgums sastādīts latviešu valodā, divos eksemplāros, no kuriem viens glabājas AUTOSKOLĀ, otrs pie AUDZĒKŅA.<br />7.5.Parakstot šo Līgumu, AUDZĒKNIS piekrīt, ka AUDZĒKŅA personas dati un personīgā informācija tiek uzglabāta un elektroniski apstrādāta AUTOSKOLAS un CSDD vajadzībām.<br />7.6.Līgums stājās spēkā parakstīšanas brīdī un ir spēkā līdz <B>".$nodarb_beigas."</B> vai līdz Pušu saistību pilnīgai izpildei.<br /><br />Ar līgumu esmu iepazinies (usies) un tam piekrītu:<br /><br />";
+        
+        $pdf->writeHTML($htmltable8, true, 0, true, 0);
+        
+        $htmltable9 = "<table>
+                  <tr> <td></td> <td></td> <td>AUDZĒKNIS:</td> <td align=\"center\">".$row_mg["vards"]." ".$row_mg["uzvards"]."</td> <td>________________________</td> </tr> 
+                  <tr> <td></td> <td></td> <td></td> <td align=\"center\"></td> <td align=\"center\"><sub>(paraksts)</sub></td> </tr>
+                  
+                  <tr> <td></td> <td></td> <td>&nbsp;</td> <td>&nbsp;</td> <td></td> </tr> 
+                  <tr> <td></td> <td></td> <td>&nbsp;</td> <td>&nbsp;</td> <td></td> </tr> 
+        
+                  <tr> <td></td> <td></td> <td>AUTOSKOLA:</td> <td align=\"center\">".$_SESSION['name']." ".$_SESSION['surname']."</td> <td>________________________</td> </tr>
+                  <tr> <td></td> <td></td> <td></td> <td align=\"center\"></td> <td align=\"center\"><sub>(paraksts)</sub></td> </tr>
+        
+                  <tr> <td></td> <td></td> <td>&nbsp;</td> <td>&nbsp;</td> <td></td> </tr> 
+        
+                  <tr> <td></td> <td>Z.v.</td> <td>&nbsp;</td> <td>&nbsp;</td> <td></td> </tr> 
+                </table>";
+        $pdf->writeHTML($htmltable9, true, 0, true, 0);
+        
+        //$htmltable9 = "<table><tr><td></td></tr><tr><td align=\"center\">                                              AUDZĒKNIS           ____________________________________</td></tr><tr><td align=\"center\">                                            <sub>                                                       </sub></td></tr></table><br /><br /><table><tr><td></td></tr><tr><td align=\"center\">".$_SESSION['name']." ".$_SESSION['surname']." ____________________________________</td></tr><tr><td></td></tr><tr><td></td></tr></table><table><tr><td></td><td align=\"left\"></td><td></td><td></td><td></td></tr></table>";
+        //$pdf->writeHTML($htmltable9, true, 0, true, 0);
+        
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        
+        // reset pointer to the last page
+        //$pdf->lastPage();
+        
+        // ---------------------------------------------------------
+        
+        //Close and output PDF document
+        $pdf->Output('ligums.pdf', 'I');
+        
+        //============================================================+
+        // END OF FILE                                                 
+        //============================================================+
+        
+        
+        //}else{
+        //	session_destroy();
+        //	echo "Hi!";
+        //}
+        ?>
+        </tbody>
+        </table>
+        <div class="footer-bottom-container section-container">
+            <div class="footer-bottom footer container">
+            <div class="inner-container">
+            <div class="clearer">
+            <div class="item item-left">
+            <div class="footer-copyright">&copy; &nbsp;|&nbsp; Sc@ndiweb Test @ssignment @@@@  &nbsp;|&nbsp;</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+           </div>
+            </div>
+            </div>
+    </html>
